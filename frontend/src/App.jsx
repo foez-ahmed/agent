@@ -16,7 +16,7 @@ import {
   deleteWorkspaceItem,
   executeWorkspaceCommand
 } from './services/workspace';
-import { Terminal, Globe, Key, Settings, Cpu, FolderOpen, AlertCircle } from 'lucide-react';
+import { Terminal, Globe, Key, Settings, Cpu, FolderOpen, AlertCircle, HardDrive } from 'lucide-react';
 
 const MODELS = [
   { value: 'meta/llama-3.3-70b-instruct', label: '(Recommended) Llama 3.3 70B' },
