@@ -28,6 +28,9 @@ jobs:
           cd frontend
           npm install
 
+      - name: Grant execute permission for vite
+        run: chmod +x frontend/node_modules/.bin/vite
+
       - name: Build Production Files
         run: |
           cd frontend
