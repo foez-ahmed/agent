@@ -1,0 +1,15 @@
+{
+  "name": "nimbus-coder",
+  "version": "1.0.0",
+  "description": "NVIDIA NIM Powered Agentic AI Coding Workspace",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "npm.cmd install --prefix backend && npm.cmd install --prefix frontend && npm.cmd install",
+    "start": "concurrently \"npm.cmd run start --prefix backend\" \"npm.cmd run dev --prefix frontend\"",
+    "backend": "npm.cmd run start --prefix backend",
+    "frontend": "npm.cmd run dev --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
