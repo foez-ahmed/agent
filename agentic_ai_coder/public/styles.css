@@ -1,0 +1,98 @@
+/* styles.css – Premium dark‑mode UI with glassmorphism */
+
+/* Global resets and typography */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, hsl(220, 30%, 12%), hsl(230, 30%, 8%));
+  color: hsl(0, 0%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Container with glass effect */
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 90%;
+  backdrop-filter: blur(12px) saturate(150%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Glass class for reusable elements */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 0.75rem;
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 2rem;
+  background: linear-gradient(45deg, hsl(210, 80%, 70%), hsl(260, 80%, 70%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+textarea#prompt {
+  width: 100%;
+  height: 120px;
+  resize: vertical;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.05);
+  color: hsl(0,0%,90%);
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+button#generateBtn {
+  background: linear-gradient(90deg, hsl(210,80%,55%), hsl(260,80%,55%));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button#generateBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+pre.output {
+  text-align: left;
+  max-height: 250px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Fade‑in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .container { padding: 1.5rem; }
+  h1 { font-size: 1.75rem; }
+}

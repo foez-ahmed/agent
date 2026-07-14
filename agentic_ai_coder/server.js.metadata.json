@@ -1,0 +1,5 @@
+{
+  "summary":  "Node.js Express server that proxies requests to NVIDIA NIM API for code generation.",
+  "updatedAt":  "2026-07-14T18:20:51.247273300Z",
+  "userFacing":  true
+}
