@@ -21,6 +21,11 @@ echo "Building frontend..."
 npm run build --prefix frontend
 
 # Serve the built frontend using a static server
+# Start backend server if present
+if [ -f "./backend/package.json" ]; then
+  echo "Starting backend..."
+  npm start --prefix backend &
+fi
 # Start static server (optionally specify port)
 
 echo "Starting static server..."
@@ -34,7 +39,7 @@ while [[ "$#" -gt 0 ]]; do
   esac
   shift
 done
-npx serve -s frontend/dist --port $PORT
+npx serve -s frontend/dist -l $PORT
 
 # Optional: run development servers
 # To start the Vite dev server (frontend) with hot reload, uncomment the line below:
